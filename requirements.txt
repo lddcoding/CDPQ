@@ -115,7 +115,6 @@ pylint==2.6.0
 pyOpenSSL==20.0.1
 pyparsing==2.4.7
 pyperclip==1.8.1
-pypiwin32==223
 pyrsistent==0.17.3
 PySimpleValidate==0.2.12
 python-dateutil==2.8.1
