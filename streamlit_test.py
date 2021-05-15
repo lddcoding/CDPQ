@@ -25,7 +25,8 @@ try:
     start = datetime.datetime.now() - datetime.timedelta(days=nb_of_year*365)
     end = date.today()
 
-    stock = st.text_input("Stock: ")
+    
+    stock = st.text_input("Enter a Valid Stock Ticker: ")
     dataframe = web.DataReader(f'{stock}', "yahoo", start, end)
 
     st.dataframe(annualized_return(dataframe, nb_of_year))
