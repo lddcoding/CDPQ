@@ -30,5 +30,4 @@ try:
 
     st.dataframe(annualized_return(dataframe, nb_of_year))
 except Exception as e: 
-
-    
+    st.write("Enter a nb of years")
