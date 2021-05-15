@@ -20,11 +20,15 @@ def annualized_return(Df, nb_of_year):
     df.index = ['Row_1']
     return df
 
-nb_of_year = st.number_input('How many year span: ', min_value=1, max_value=15, step=1)
-start = datetime.datetime.now() - datetime.timedelta(days=nb_of_year*365)
-end = date.today()
+try:
+    nb_of_year = st.number_input('How many year span: ', min_value=1, max_value=15, step=1)
+    start = datetime.datetime.now() - datetime.timedelta(days=nb_of_year*365)
+    end = date.today()
 
-stock = st.text_input("Stock: ")
-dataframe = web.DataReader(f'{stock}', "yahoo", start, end)
+    stock = st.text_input("Stock: ")
+    dataframe = web.DataReader(f'{stock}', "yahoo", start, end)
 
-st.dataframe(annualized_return(dataframe, nb_of_year))
+    st.dataframe(annualized_return(dataframe, nb_of_year))
+except Exception as e: 
+    print(e)
+    
