@@ -249,7 +249,7 @@ def sharpe_ratio_over_10y(stock, rf):
     plt.plot(df['Date'], df['Sharpe Ratio'], c='green')
     plt.xlabel('Years')
     plt.ylabel('Sharpe Ratio')
-    plt.title(f'Sharpe Ratio over 10 years for {stock.upper()}, (Risk Free Return: {rf_percent}) %')
+    plt.title(f'Sharpe Ratio over 10 years for {stock.upper()}, (Risk Free Return: {rf_percent} %)')
     st.pyplot(fig)
 
 
